@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 15px;
+  padding: 15px;
+  background-image: url("/assets/img/background.jpg");
+  background-position: center , center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+body a {
+  text-decoration: none;
+  color: #fff;
+}
+.listas li {
+  list-style: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.lista-2{
+  color: #000;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carrusel {
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+h1 {
+  font-size: 4.0625rem;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5625rem;
+  text-align: center;
+}
+.product {
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat (3, auto);
+  grid-template-rows: repeat (3, auto);
+  grid-template-areas:
+    "card-1 card-2 card-3"
+    "card-4 card-5 card-6"
+    "card-7 card-8 card-9";
+}
+.product div {
+  font-size: 1.5625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+}
+.foot {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.formulario {
+  border: 3px solid black;
+  text-align: center;
+}
+.formulario>form>ul>li {
+  font-size: 2.1875rem;
+}
+.formulario>form>ul>li>input {
+  font-size: 1.875rem;
+}
+.cards {
+  font-size: 1.5rem;
+}
