@@ -3,32 +3,49 @@
   margin: 0;
   box-sizing: border-box;
 }
+/*esta seccion afecta al body y se aplica a todos los html del sitio*/
 body {
+  overflow-x: hidden;
   font-family: "Roboto Condensed", sans-serif;
-  margin: 15px;
-  padding: 15px;
-  background-image: url("../assets/img/background.jpg");
-  background-position: center , center;
+  width: 100%;
+  height: auto;
+  background-image:url("../assets/img/background.jpg");
+  background-position: center, center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
 }
+
 body a {
   text-decoration: none;
   color: #fff;
 }
+/*aqui se aplican los estilos para la barra de navegacion*/
+.nav-bar {
+  width: 95%;
+  margin: 2.5%;
+  height: 3.125rem;
+  margin-top: 1.875rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+.carrito{
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
 .listas li {
   list-style: none;
   display: inline-block;
+  align-items: center;
   font-size: 1.25rem;
   padding-left: 5px;
   padding-right: 5px;
 }
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/*Carrusel (en proceso de desarrollo*/
 .carrusel {
   margin-top: 3.125rem;
   margin-bottom: 3.125rem;
@@ -38,18 +55,21 @@ body a {
 h1 {
   font-size: 4.0625rem;
   text-align: center;
+  margin-top: 3.125rem;
 }
 h2 {
   font-size: 1.5625rem;
   text-align: center;
+  margin-bottom: 3.125rem;
 }
+/*esta seccion afecta a las card de la pagina principal */
 .product {
+  width: 100%;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 3.125rem;
   display: grid;
-  grid-gap: 50px;
+  grid-gap: 3.125rem;
   grid-template-columns: repeat (3, auto);
   grid-template-rows: repeat (3, auto);
   grid-template-areas:
@@ -58,30 +78,35 @@ h2 {
     "card-7 card-8 card-9";
 }
 .product div {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   font-size: 1.5625rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 3px solid black;
   border-radius: 10px;
-  width: 250px;
-  height: 250px;
-}
-.foot {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-}
-.formulario {
-  border: 3px solid black;
-  text-align: center;
-}
-.formulario>form>ul>li {
-  font-size: 20px;
-}
-.formulario>form>ul>li>input {
-  font-size: 20px;
+  width: 15.625rem;
+  height: 15.625rem;
 }
 .cards {
+  width: 95%;
+  margin: 2.5%;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   font-size: 1.5rem;
+}
+/*seccion de pie de pagina que aplica a todos los html del sitio*/
+.foot {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  width: 95%;
+  height: 3.125rem;
+  margin: 2.5%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  height: 3.125rem;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

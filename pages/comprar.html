@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"rel="stylesheet"/>
     <link rel="stylesheet" href="../css/style.css"/>
-    <title>COMPRAR</title>
+    <link rel="stylesheet" href="../css/formulario.css">
+    <title>FIT-ONE</title>
   </head>
   <body>
     <header>
@@ -21,51 +22,61 @@
         <ul class="listas">
           <li><a href="../pages/comprar.html">COMPRAR</a></li>
           <li>
-            <a href="#">MIS COMPRAS<img src="../assets/img/cart.svg"alt="CARRITO DE COMPRAS"width="30px"height="30px"/></a>
+            <a href="../pages/mis-compras.html">MIS COMPRAS<img src="../assets/img/cart.svg"alt="CARRITO DE COMPRAS"width="30px"height="30px"/></a>
           </li>
         </ul>
       </nav>
     </header>
-    <br /><br />
-    <hr />
+    <section>
+      <h1>FIT-ONE</h1>
+      <h2>healt and fitness</h2>
+    </section>
+    <hr>
     <!-- aqui iria un formulario para registrarse y luego comenzar a comprar -->
     <main>
       <section>
         <h2>PARA CONTINUAR CON LA COMPRA DEBE REGISTRASE</h2>
       </section>
-      <hr />
-      <br /><br />
+      <hr>
       <!-- formulario para registro en el sitio, luego de los primeros datos solicitados se solicitara una creacion de contraseña -->
-      <section class="formulario">
-        <form>
-          <ul class="listas">
-            <li>
-              <label for="name">Nombre:</label>
-              <input type="text" name="user_name" id="name" />
-            </li>
-            <br />
-            <li>
-              <label for="name">Apellido:</label>
-              <input type="text" name="user_name" id="name" />
-            </li>
-            <br />
-            <li>
-              <label for="email">Email:</label>
-              <input type="text" id="email" maxlength="50" />
-            </li>
-            <br />
-            <li>
-              <button type="submit">Registrarme</button>
-            </li>
-          </ul>
+      <section class="contenedor">
+        <form class="formulario">
+        <fieldset>
+          <legend>COMPLETA TUS DATOS</legend>
+              <label for="name">
+                <span>Nombre:</span>
+                <input type="text" id="name" placeholder="Nombre" />
+              </label>
+              <br>
+              <label for="name">
+                <span>Apellido:</span>
+                <input type="text" name="user_name" id="name" placeholder="Apellido" />
+              </label>
+              <br>
+            <label for="email">
+              <span>E-mail:</span>
+            <input type="text" id="email" maxlength="50" placeholder="E-mail" />
+            </label>
+            <br>
+            <label for="name">
+              <span>Direccion de envio:</span>
+              <input type="text" placeholder="Direccion de envio">
+            </label>
+            <br>
+            <label for="name">
+              <span>Telefono:</span>
+              <input type="text" placeholder="Telefono">
+            </label>
+            <br>
+              <button type="submit" class="button">Registrarme</button>
+        </fieldset>
         </form>
       </section>
     </main>
-    <br><br>
     <!-- aqui va el footer con informacion de contacto y redes sociales -->
     <footer class="foot">
       <ul class="listas">
-        <li><a href="#">CONTACTO</a></li>
+        <li><a href="./contacto.html">CONTACTO</a></li>
         <li><a href="#">INSTAGRAM</a></li>
         <li><a href="#">FACEBOOK</a></li>
       </ul>
