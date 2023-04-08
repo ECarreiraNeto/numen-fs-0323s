@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"rel="stylesheet"/>
     <link rel="stylesheet" href="../css/style.css"/>
-    <link rel="stylesheet" href="../css/formulario.css">
     <title>FIT-ONE</title>
   </head>
   <body>
@@ -40,34 +39,29 @@
       <hr>
       <!-- formulario para registro en el sitio, luego de los primeros datos solicitados se solicitara una creacion de contraseña -->
       <section class="contenedor">
-        <form class="formulario">
-        <fieldset>
+        <form>
+        <fieldset class="formulario">
           <legend>COMPLETA TUS DATOS</legend>
-              <label for="name">
+              <label for="name" class="nombre">
                 <span>Nombre:</span>
                 <input type="text" id="name" placeholder="Nombre" />
               </label>
-              <br>
-              <label for="name">
+              <label for="name" class="apellido">
                 <span>Apellido:</span>
                 <input type="text" name="user_name" id="name" placeholder="Apellido" />
               </label>
-              <br>
-            <label for="email">
+            <label for="email" class="mail">
               <span>E-mail:</span>
             <input type="text" id="email" maxlength="50" placeholder="E-mail" />
             </label>
-            <br>
-            <label for="name">
+            <label for="name" class="direccion">
               <span>Direccion de envio:</span>
-              <input type="text" placeholder="Direccion de envio">
+              <input type="text" placeholder="Direccion de envio" maxlength="100">
             </label>
-            <br>
-            <label for="name">
+            <label for="name" class="tele">
               <span>Telefono:</span>
               <input type="text" placeholder="Telefono">
             </label>
-            <br>
               <button type="submit" class="button">Registrarme</button>
         </fieldset>
         </form>

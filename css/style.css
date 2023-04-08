@@ -110,3 +110,127 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
+/*seccion de estilos para las tarjetas de productos de las distintas pages*/
+.product-cards {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.125rem;
+  display: grid;
+  grid-gap: 3.125rem;
+  grid-template-columns: repeat (3, auto);
+  grid-template-rows: repeat (3, auto);
+  grid-template-areas:
+    "card-1 card-2 card-3"
+    "card-4 card-5 card-6"
+    "card-7 card-8 card-9";
+}
+.product-cards div {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  font-size: 1.5625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 9.375rem;
+  height: 9.375rem;
+}
+/*estilos para formulario de compra*/
+.contenedor{
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+}
+.formulario{
+  margin-top: 6.25rem;
+  padding: 30px;
+  display: grid;
+  grid-gap: .9375rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: 
+                      "nombre   apellido"
+                      "mail     tele"
+                      "direccion direccion"
+                      "consulta  consulta"
+                      "button    button";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.nombre {
+  grid-area: nombre;
+}
+.apellido {
+  grid-area: apellido;
+}
+
+.mail {
+  grid-area: mail;
+}
+.direccion {
+ grid-area: direccion;
+}
+.button {
+  grid-area: button;
+  width: 50%;
+  margin-top: 1.875rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 1.25rem;
+}
+.consulta {
+  grid-area: consulta;
+}
+.formulario fieldset {
+  padding: 30px;
+  font-size: 1.875rem;
+}
+span {
+  font-size: 1.5rem;
+}
+input {
+  font-size: 18px;
+}
+/*estilos para formulario de contacto*/
+.formulario-2 {
+  margin-top: 6.25rem;
+  padding: 30px;
+  display: grid;
+  grid-gap: .9375rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: 
+                      "nombre-2   apellido-2"
+                      "mail-2     tel-2"
+                      "consulta-2 consulta-2"
+                      "texto       texto"
+                      "button-2     button-2";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.nombre-2 {
+  grid-area: nombre-2;
+}
+.mail-2 {
+  grid-area: mail-2;
+}
+.tel-2 {
+  grid-area: tel-2;
+}
+.consulta-2 {
+  grid-area: consulta-2;
+  width: 50%;
+  margin-right: 50%;
+}
+.texto {
+  grid-area: texto;
+  width: 100%;
+}
+.button-2 {
+  grid-area: button-2;
+  width: 50%;
+  margin-top: 1.875rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 20px;
+}

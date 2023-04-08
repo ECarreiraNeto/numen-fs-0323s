@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"rel="stylesheet"/>
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/formulario.css">
     <title>FIT-ONE</title>
   </head>
   <body>
@@ -35,36 +34,30 @@
     <main>
         <h2>SI DESEA PONERSE EN CONTACTO CON NOSOTROS DEJENOS SU CONSULTA:</h2>
         <section class="contenedor">
-            <form class="formulario">
-            <fieldset>
+            <form>
+            <fieldset class="formulario-2">
               <legend>COMPLETA TUS DATOS</legend>
-                  <label for="name">
+                  <label for="name" class="nombre-2">
                     <span>Nombre:</span>
                     <input type="text" id="name" placeholder="Nombre" />
                   </label>
-                  <br>
-                  <label for="name">
+                  <label for="name" class="apellido-2">
                     <span>Apellido:</span>
                     <input type="text" name="user_name" id="name" placeholder="Apellido" />
                   </label>
-                  <br>
-                <label for="email">
+                <label for="email" class="mail-2">
                   <span>E-mail:</span>
                 <input type="text" id="email" maxlength="50" placeholder="E-mail" />
                 </label>
-                <br>
-                <label for="name">
+                <label for="name" class="tel-2">
                   <span>Telefono:</span>
                   <input type="text" placeholder="Telefono">
                 </label>
-                <br>
-                <label for="name">
+                <label for="name" class="consulta-2">
                   <span>Consulta:</span>
-                  <br>
-                  <textarea name="Consulta" id="" cols="30" rows="10"></textarea>
+                  <textarea cols="30" rows="10" class="texto"></textarea>
                 </label>
-                <br>
-                  <button type="submit" class="button">Enviar consulta</button>
+                  <button type="submit" class="button-2">Enviar consulta</button>
             </fieldset>
             </form>
           </section>
