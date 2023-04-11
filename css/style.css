@@ -15,17 +15,41 @@ body {
   background-repeat: no-repeat;
   color: #fff;
 }
-
+body {
+  display: grid;
+  grid-template-columns:repeat(2, 1fr) ;
+  grid-template-rows:repeat(5, auto) ;
+  grid-template-areas: 
+                      "nav         nav"
+                      "container   container"
+                      "container   container"
+                      "container   container"
+                      "foot        foot";
+}
 body a {
   text-decoration: none;
   color: #fff;
 }
+/*seccion para definir areas de la grid principal*/
+.nav {
+  grid-area: nav;
+}
+.titulo {
+  grid-area: titulo;
+}
+.container {
+  grid-area: container;
+}
+.foot {
+  grid-area: foot;
+}
 /*aqui se aplican los estilos para la barra de navegacion*/
 .nav-bar {
-  width: 95%;
-  margin: 2.5%;
+  width: 95%; 
   height: 3.125rem;
+  margin: 2.5%; 
   margin-top: 1.875rem;
+  padding: .9375rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   display: flex;
   justify-content: space-between;
@@ -33,10 +57,7 @@ body a {
   border: 3px solid black;
   border-radius: 10px;
 }
-.carrito{
-  width: 1.5625rem;
-  height: 1.5625rem;
-}
+
 .listas li {
   list-style: none;
   display: inline-block;
@@ -45,13 +66,23 @@ body a {
   padding-left: 5px;
   padding-right: 5px;
 }
+.carrito{
+  width: 30px;
+  height: 30px;
+}
 /*Carrusel (en proceso de desarrollo*/
 .carrusel {
+  width: 90%;
+  margin: 5%;
+  grid-area: carrusel;
   margin-top: 3.125rem;
   margin-bottom: 3.125rem;
   text-align: center;
   font-size: 2.5rem;
+  border: 3px solid #fff;
+  border-radius: 10px;
 }
+/*titulos del sitio*/
 h1 {
   font-size: 4.0625rem;
   text-align: center;
@@ -62,8 +93,13 @@ h2 {
   text-align: center;
   margin-bottom: 3.125rem;
 }
+ h2.compras{
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
 /*esta seccion afecta a las card de la pagina principal */
 .product {
+  grid-area: product;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -83,10 +119,11 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid black;
+  border: 3px solid #000000;
   border-radius: 10px;
   width: 15.625rem;
   height: 15.625rem;
+  
 }
 .cards {
   width: 95%;
@@ -94,6 +131,30 @@ h2 {
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+.product div::after, .product div::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.product div:hover{
+  transform: translate(-12px, -12px);
+}
+.product div:hover::after{
+  transform: translate(6px, 6px);
+  border: none;  
+}
+.product div:hover::before{
+  transform: translate(12px, 12px);
+  border: none;
 }
 /*seccion de pie de pagina que aplica a todos los html del sitio*/
 .foot {
@@ -103,7 +164,7 @@ h2 {
   margin: 2.5%;
   margin-top: 5rem;
   margin-bottom: 5rem;
-  height: 3.125rem;
+  padding: .9375rem;
   border: 3px solid black;
   border-radius: 10px;
   display: flex;
@@ -135,11 +196,35 @@ h2 {
   border-radius: 10px;
   width: 9.375rem;
   height: 9.375rem;
+  transition: transform 0.3s ease;
+}
+.product-cards div::after, .product-cards div::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.product-cards div:hover{
+  transform: translate(-12px, -12px);
+}
+.product-cards div:hover::after{
+  transform: translate(6px, 6px);
+  border: none;
+}
+.product-cards div:hover::before{
+  transform: translate(12px, 12px);
+  border: none;
 }
 /*estilos para formulario de compra*/
 .contenedor{
  width: 100vw;
- height: 100vh;
+ height: auto;
  display: flex;
  justify-content: center;
 }
@@ -149,14 +234,16 @@ h2 {
   display: grid;
   grid-gap: .9375rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
   grid-template-areas: 
                       "nombre   apellido"
                       "mail     tele"
+                      "prov     ciudad"
                       "direccion direccion"
                       "consulta  consulta"
                       "button    button";
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border: 3px solid black;
 }
 .nombre {
   grid-area: nombre;
@@ -168,17 +255,16 @@ h2 {
 .mail {
   grid-area: mail;
 }
+.prov {
+  grid-area: prov;
+}
+.ciudad {
+  grid-area: ciudad;
+}
 .direccion {
  grid-area: direccion;
 }
-.button {
-  grid-area: button;
-  width: 50%;
-  margin-top: 1.875rem;
-  margin-left: 25%;
-  margin-right: 25%;
-  font-size: 1.25rem;
-}
+
 .consulta {
   grid-area: consulta;
 }
@@ -190,14 +276,60 @@ span {
   font-size: 1.5rem;
 }
 input {
-  font-size: 18px;
+  width: 100%;
+  color: #fff;
+  font-size: 1.125rem;
+  padding: .625rem .625rem;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #fff;
 }
+/*estilos para boton con efecto*/
+.button {
+  grid-area: button;
+  width: 50%;
+  padding: 1.25rem 3.125rem;
+  margin-top: 1.875rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 1.25rem;
+  background: none;
+  color: #fff;
+  border-radius: 10px;
+  border-color: #fff;
+  transition: transform 0.3s ease;
+}
+.button::after, .button::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.button:hover{
+  transform: translate(-12px, -12px);
+}
+.button:hover::after{
+  transform: translate(6px, 6px);
+  border: none;
+}
+.button:hover::before{
+  transform: translate(12px, 12px);
+  border: none;
+}
+/*final del boton*/
 /*estilos para formulario de contacto*/
 .formulario-2 {
   margin-top: 6.25rem;
   padding: 30px;
   display: grid;
-  grid-gap: .9375rem;
+  grid-gap: 2.5em;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, auto);
   grid-template-areas: 
@@ -207,6 +339,7 @@ input {
                       "texto       texto"
                       "button-2     button-2";
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border: 3px solid black;
 }
 .nombre-2 {
   grid-area: nombre-2;
@@ -219,18 +352,130 @@ input {
 }
 .consulta-2 {
   grid-area: consulta-2;
-  width: 50%;
-  margin-right: 50%;
+  width: 100%;
 }
 .texto {
   grid-area: texto;
   width: 100%;
+  padding: 1.25rem;
+  background: none;
+  color: #fff;
+  border-radius: .625rem;
+  border-color: #fff;
+  font-size: 1.25rem;
 }
 .button-2 {
   grid-area: button-2;
   width: 50%;
+  padding: 1.25rem 3.125rem;
   margin-top: 1.875rem;
   margin-left: 25%;
   margin-right: 25%;
-  font-size: 20px;
+  font-size: 1.5rem;
+  background: none;
+  color: #fff;
+  border-radius: 10px;
+  border-color: #fff;
+  transition: transform 0.3s ease;
+}
+.button-2::after, .button-2::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.button-2:hover{
+  transform: translate(-12px, -12px);
+}
+.button-2:hover::after{
+  transform: translate(6px, 6px);
+  border: none;
+  border-radius: .625rem;
+}
+.button-2:hover::before{
+  transform: translate(12px, 12px);
+  border: none;
+}
+
+/*Estilos para las ofertas de productos*/
+.titulo-of {
+  margin-top: 6.25rem;
+}
+
+.ofertas {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.125rem;
+  display: grid;
+  grid-gap: 3.125rem;
+  grid-template-columns: repeat (2, 1fr);
+  grid-template-rows: repeat (6, auto);
+  grid-template-areas:
+    "of-1 of-1"
+    "of-2 of-2"
+    "of-3 of-3"
+    "of-4 of-4"
+    "of-5 of-5"
+    "of-6 of-6";
+}
+.ofertas .of-1 {
+  grid-area: of-1;
+}
+.ofertas .of-2 {
+  grid-area: of-2;
+}
+.ofertas .of-3 {
+  grid-area: of-3;
+}
+.ofertas .of-4 {
+  grid-area: of-4;
+}
+.ofertas .of-5 {
+  grid-area: of-5;
+}
+.ofertas div .of-6 {
+  grid-area: of-6;
+}
+.ofertas div {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  font-size: 1.5625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 37.5rem;
+  min-width: 9.375rem;
+  height: 9.375rem;
+  transition: transform 0.3s ease;
+}
+.ofertas div::after, .ofertas div::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.ofertas div:hover{
+  transform: translate(-12px, -12px);
+}
+.ofertas div:hover::after{
+  transform: translate(6px, 6px);
+  border: none;
+}
+.ofertas div:hover::before{
+  transform: translate(12px, 12px);
+  border: none;
 }

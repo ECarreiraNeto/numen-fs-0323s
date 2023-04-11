@@ -11,7 +11,7 @@
     <title>FIT-ONE</title>
   </head>
   <body>
-    <header>
+    <header class="nav">
       <!-- barra de navegacion-->
       <nav class="nav-bar">
         <ul class="listas">
@@ -26,17 +26,15 @@
         </ul>
       </nav>
     </header>
-    <section>
-      <h1>FIT-ONE</h1>
-      <h2>healt and fitness</h2>
-    </section>
-    <hr>
     <!-- aqui iria un formulario para registrarse y luego comenzar a comprar -->
-    <main>
+    <main class="container">
       <section>
-        <h2>PARA CONTINUAR CON LA COMPRA DEBE REGISTRASE</h2>
+        <h1>FIT-ONE</h1>
+        <h2>healt and fitness</h2>
       </section>
-      <hr>
+      <section>
+        <h2 class="compras">PARA CONTINUAR CON LA COMPRA DEBE REGISTRARSE</h2>
+      </section>
       <!-- formulario para registro en el sitio, luego de los primeros datos solicitados se solicitara una creacion de contraseña -->
       <section class="contenedor">
         <form>
@@ -62,6 +60,14 @@
               <span>Telefono:</span>
               <input type="text" placeholder="Telefono">
             </label>
+            <label for="name" class="prov">
+              <span>Provincia:</span>
+              <input type="text" placeholder="Provincia">
+            </label>
+            <label for="name" class="ciudad">
+              <span>Ciudad:</span>
+              <input type="text" placeholder="Ciudad">
+            </label>
               <button type="submit" class="button">Registrarme</button>
         </fieldset>
         </form>
@@ -75,7 +81,7 @@
         <li><a href="#">FACEBOOK</a></li>
       </ul>
       <ul class="listas">
-        <li><a href="#">SOBRE NOSOTROS</a></li>
+        <li><a href="./nosotros.html">SOBRE NOSOTROS</a></li>
       </ul>
     </footer>
   </body>
