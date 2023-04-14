@@ -123,15 +123,18 @@ h2 {
   border-radius: 10px;
   width: 15.625rem;
   height: 15.625rem;
-  
+  transition: transform 0.3s ease;
 }
 .cards {
   width: 95%;
   margin: 2.5%;
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   font-size: 1.5rem;
   transition: transform 0.3s ease;
+}
+.info {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  font-size: 1.25rem;
 }
 .product div::after, .product div::before {
   content: "";
@@ -194,8 +197,9 @@ h2 {
   align-items: center;
   border: 3px solid black;
   border-radius: 10px;
-  width: 9.375rem;
-  height: 9.375rem;
+  width: 13.125rem;
+  height: auto;
+  padding: .1875rem; 
   transition: transform 0.3s ease;
 }
 .product-cards div::after, .product-cards div::before {
@@ -478,4 +482,16 @@ input {
 .ofertas div:hover::before{
   transform: translate(12px, 12px);
   border: none;
+}
+/* Estilos para imagenes de productos */
+.imagenes {
+  object-fit: cover;
+  width: 12.5rem;
+  height: 12.5rem; 
+  border-radius: .3125rem;
+}
+.precios {
+  list-style: none;
+  text-align: center;
+  font-size: 1rem;
 }
