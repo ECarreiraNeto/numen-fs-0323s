@@ -45,26 +45,28 @@ body a {
 }
 /*aqui se aplican los estilos para la barra de navegacion*/
 .nav-bar {
-  width: 95%; 
+  width: 100%; 
   height: 3.125rem;
-  margin: 2.5%; 
-  margin-top: 1.875rem;
-  padding: .9375rem;
+  margin: auto;
+  padding: .625rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   border: .1875rem solid black;
   border-radius: .625rem;
 }
-
-.listas li {
-  list-style: none;
-  display: inline-block;
+.nav-bar2 {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
+}
+.listas li{
+  list-style: none;
+  display: inline;
+  justify-content: center;
   font-size: 1.25rem;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: .3125rem .3125rem;
   transition: all 0.3s ease;
 }
 .listas li a:hover {
@@ -73,9 +75,16 @@ body a {
   border-radius: .1875rem;
   font-weight: bold;
 }
+.list-cart {
+  list-style: none;
+  display: inline;
+  justify-content: center;
+  font-size: 1.25rem;
+  padding: .3125rem .3125rem;
+}
 .carrito{
-  width: 1.375rem;
-  height: 1.375rem;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 /*Carrusel (en proceso de desarrollo*/
 .carrusel {
@@ -96,7 +105,8 @@ body a {
 }
 .mis-compras {
   width: 43.75rem;
-  height: 31.25rem;
+  height: 43.75rem;
+  padding: .625rem;
   border: solid #000;
   border-radius: .625rem;
   align-items: center;
@@ -125,7 +135,7 @@ h2 {
   margin-top: 3.125rem;
   display: grid;
   grid-gap: 3.125rem;
-  grid-template:repeat (3, auto) / repeat(3, auto);
+  grid-template:repeat (3, auto) / repeat(3, 1fr);
   grid-template-areas:
     "card-1 card-2 card-3"
     "card-4 card-5 card-6"
@@ -141,30 +151,10 @@ h2 {
   border-radius: 10px;
   width: 15.625rem;
   height: 15.625rem;
-  transition: transform 0.3s ease;
-}
-.product div::after, .product div::before {
-  content: "";
-  position: absolute;
-  opacity: 0.3;
-  background: none;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .product div:hover{
   transform: translate(-12px, -12px);
-}
-.product div:hover::after{
-  transform: translate(6px, 6px);
-  border: none;  
-}
-.product div:hover::before{
-  transform: translate(12px, 12px);
-  border: none;
 }
 .cards {
   width: 95%;
@@ -181,11 +171,11 @@ h2 {
 /*seccion de pie de pagina que aplica a todos los html del sitio*/
 .foot {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  width: 95%;
+  width: 100%;
   height: 3.125rem;
-  margin: 2.5%;
+  margin: auto;
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1.875rem;
   padding: .9375rem;
   border: 3px solid black;
   border-radius: 10px;
@@ -193,6 +183,18 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
+.foot-img {
+  width: 1.875rem;
+  margin: .625rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.foot-list {
+  display: flex;
+  list-style: none;
+ }
+
 /*seccion de estilos para las tarjetas de productos de las distintas pages*/
 .product-cards {
   width: 100%;
@@ -201,52 +203,40 @@ h2 {
   margin-top: 3.125rem;
   display: grid;
   grid-gap: 3.125rem;
-  grid-template-columns: repeat (3, auto);
+  grid-template-columns: repeat (4, 1fr);
   grid-template-rows: repeat (3, auto);
   grid-template-areas:
-    "card-1 card-2 card-3"
-    "card-4 card-5 card-6"
-    "card-7 card-8 card-9";
+    "product-1 product-2 product-3 product-4"
+    "prodcut-5 product-6 product-7 product-8";
 }
 .product-cards div {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  font-size: 1.5625rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid black;
-  border-radius: 10px;
+  border-radius: .625rem;
   width: 13.125rem;
   height: auto;
-  padding: .1875rem; 
-  transition: transform 0.3s ease;
-}
-.product-cards div::after, .product-cards div::before {
-  content: "";
-  position: absolute;
-  opacity: 0.3;
-  background: none;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .product-cards div:hover{
   transform: translate(-12px, -12px);
 }
-.product-cards div:hover::after{
-  transform: translate(6px, 6px);
-  border: none;
+/* Estilos para imagenes de productos */
+.imagenes {
+  object-fit: cover;
+  width: 13.125rem;
+  height: 13.125rem;
+  border-radius:.625rem .625rem 0rem 0rem;
 }
-.product-cards div:hover::before{
-  transform: translate(12px, 12px);
-  border: none;
+.precios {
+  list-style: none;
+  text-align: center;
+  font-size: 1rem;
 }
 /*estilos para formulario de compra*/
 .contenedor{
- width: 100vw;
+ width: 100%;
  height: auto;
  display: flex;
  justify-content: center;
@@ -321,36 +311,16 @@ input {
   color: #fff;
   border-radius: 10px;
   border-color: #fff;
-  transition: transform 0.3s ease;
-}
-.button::after, .button::before {
-  content: "";
-  position: absolute;
-  opacity: 0.3;
-  background: none;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .button:hover{
   transform: translate(-12px, -12px);
-}
-.button:hover::after{
-  transform: translate(6px, 6px);
-  border: none;
-}
-.button:hover::before{
-  transform: translate(12px, 12px);
-  border: none;
 }
 /*final del boton*/
 /*estilos para formulario de contacto*/
 .formulario-2 {
   margin-top: 6.25rem;
-  padding: 30px;
+  padding: 1.875rem;
   display: grid;
   grid-gap: 2.5em;
   grid-template-columns: 1fr 1fr;
@@ -399,33 +369,11 @@ input {
   color: #fff;
   border-radius: 10px;
   border-color: #fff;
-  transition: transform 0.3s ease;
-}
-.button-2::after, .button-2::before {
-  content: "";
-  position: absolute;
-  opacity: 0.3;
-  background: none;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .button-2:hover{
   transform: translate(-12px, -12px);
 }
-.button-2:hover::after{
-  transform: translate(6px, 6px);
-  border: none;
-  border-radius: .625rem;
-}
-.button-2:hover::before{
-  transform: translate(12px, 12px);
-  border: none;
-}
-
 /*Estilos para las ofertas de productos*/
 .titulo-of {
   margin-top: 6.25rem;
@@ -438,8 +386,7 @@ input {
   margin-top: 3.125rem;
   display: grid;
   grid-gap: 3.125rem;
-  grid-template-columns: repeat (2, 1fr);
-  grid-template-rows: repeat (6, auto);
+  grid-template: repeat(6, auto) / repeat(2, 1fr);
   grid-template-areas:
     "of-1 of-1"
     "of-2 of-2"
@@ -448,22 +395,22 @@ input {
     "of-5 of-5"
     "of-6 of-6";
 }
-.ofertas .of-1 {
+.of-1 {
   grid-area: of-1;
 }
-.ofertas .of-2 {
+.of-2 {
   grid-area: of-2;
 }
-.ofertas .of-3 {
+.of-3 {
   grid-area: of-3;
 }
-.ofertas .of-4 {
+.of-4 {
   grid-area: of-4;
 }
-.ofertas .of-5 {
+.of-5 {
   grid-area: of-5;
 }
-.ofertas div .of-6 {
+.of-6 {
   grid-area: of-6;
 }
 .ofertas div {
@@ -474,46 +421,15 @@ input {
   align-items: center;
   border: 3px solid black;
   border-radius: 10px;
-  width: 37.5rem;
-  min-width: 9.375rem;
+  width: 80%;
+  margin: auto;
   height: 9.375rem;
-  transition: transform 0.3s ease;
-}
-.ofertas div::after, .ofertas div::before {
-  content: "";
-  position: absolute;
-  opacity: 0.3;
-  background: none;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .ofertas div:hover{
   transform: translate(-12px, -12px);
 }
-.ofertas div:hover::after{
-  transform: translate(6px, 6px);
-  border: none;
-}
-.ofertas div:hover::before{
-  transform: translate(12px, 12px);
-  border: none;
-}
-/* Estilos para imagenes de productos */
-.imagenes {
-  object-fit: cover;
-  width: 12.5rem;
-  height: 12.5rem; 
-  border-radius: .3125rem;
-}
-.precios {
-  list-style: none;
-  text-align: center;
-  font-size: 1rem;
-}
+
 /*Estilos para descripciones de productos*/
 details{
   cursor: pointer;
@@ -535,4 +451,243 @@ summary::before {
 }
 details[open] summary::before {
   content: '-';
+}
+/*estilos SOBRE NOSOTROS*/
+.about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  width: 43.75rem;
+  height: auto;
+  padding: .9375rem;
+  padding-bottom: 1.875rem;
+  border: solid #000;
+  border-radius: .625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.about p {
+  font-size: 1.25rem;
+  text-align: justify;
+}
+.about li {
+  list-style: none;
+  font-size: 1.5625rem;
+  margin: .9375rem .9375rem;
+}
+.about .ab1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* /////////////////////////////// */
+/* Media Queries */
+@media screen and (max-width: 769px) {
+/* media para pagina principal */
+.carrusel {
+  width: 100%;
+  margin: auto;
+  font-size: 1.5625rem;
+}
+h1 {
+  font-size: 2.8125rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+.product {
+  grid-gap: 1.125rem;
+}
+.product div {
+  width: 10.625rem;
+  height: 10.625rem;
+  font-size: 1.25rem;
+}
+/* media para productos de distintas pages */
+  .product-cards {
+    grid-gap: 1.125rem;
+  }
+  .product-cards div {
+    width: 10.625rem;
+    height: auto;
+    background: none;
+  }
+  .imagenes {
+  object-fit: cover;
+  width: 10.625rem;
+  height: 10.625rem;
+  border-radius: .625rem;
+  }
+  .description {
+    display: none;
+  }
+  .price {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border-radius: .625rem;
+  }
+  summary {
+    font-size: 1.125rem;
+  }
+  summary::before {
+    font-size: 1.125rem;
+  }
+  .carrito {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+  /* media para nav-bar y footer */
+  .listas li {
+    font-size: 1.125rem;
+  }
+  .foot-img {
+    width: 1.5625rem;
+    margin: .625rem;
+  }
+  .nav-bar {
+    width: 100%;
+    margin: auto;
+    height: 2.5rem;
+  }
+  .foot {
+    width: 100%;
+    margin: auto;
+    height: 2.5rem;
+    margin-top: 3.125rem;
+  }
+  /* media para formularios*/
+  .formulario fieldset {
+    padding: 25px;
+    font-size: 1.375rem;
+  }
+  span {
+    font-size: 1.25rem;
+  }
+  input {
+    font-size: 1rem;
+  }
+  .button {
+    padding: 1.25rem 2.1875rem;
+    font-size: 1.125rem;
+  }
+  .button-2 {
+    padding: 1.25rem 2.1875rem;
+    font-size: 1.125rem;
+  }
+  .texto{
+    font-size: 1rem;
+  }
+  /* media para carrito de compras */
+.mis-compras {
+  margin-top: 3.125rem;
+  width: 37.5rem;
+  height: 37.5rem;
+}
+}
+/* /////////// */
+@media screen and (max-width:426px) {
+/* media para pagina principal */
+.carrusel {
+  width: 90%;
+  margin: auto;
+  font-size: 1.25rem;
+}
+h1 {
+  font-size: 2.1875rem;
+  margin-top: 1.875rem;
+}
+h2 {
+  font-size: 1.125rem;
+  margin-bottom: 1.875rem;
+}
+.product {
+  grid-gap: 1.125rem;
+  grid-template:repeat (5, 1fr) / repeat (2, 1fr);
+  grid-template-areas:
+    "card-1 card-2"
+    "card-3 card-4" 
+    "card-5 card-6"
+    "card-7 card-8" 
+    "card-9 card-9";
+}
+.card-9 {
+  grid-area: card-9;
+  justify-self: center;
+}
+/* media para nav-bar y footer */
+.carrito {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+.foot-img {
+  width: 1.375rem;
+  margin: .625rem;
+}
+/* media para productos de distintas pages */
+.product-cards {
+  grid-gap: 1.875rem;
+  grid-template: repeat (4, 1fr) / repeat(2, 1fr);
+  grid-template-areas:
+    "product-1 product-2"
+    "product-3 product-4"
+    "prodcut-5 product-6"
+    "product-7 product-8";
+}
+.product-cards div {
+  border-radius: .625rem;
+  width: 9.375rem;
+  height: auto;
+}
+/* media para formulario de contacto */
+.formulario-2 {
+  margin-top: 3.125rem;
+  padding: 1.5625rem;
+  display: grid;
+  grid-gap: 1.875rem;
+}
+.texto {
+  font-size: 1rem;
+}
+.button-2 {
+  padding: .9375rem .9375rem;
+  margin-top: 1.25rem;
+}
+/* media para formulario de compra */
+.contenedor{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+ }
+ .formulario{
+   margin-top: 3.125rem;
+   padding: 1.5625rem;
+ }
+ .formulario fieldset {
+   padding: 1.25rem;
+   font-size: 1.5625rem;
+ }
+ span {
+   font-size: 1.25rem;
+ }
+ .button {
+   padding: .9375rem .9375rem;
+   font-size: 1.125rem;
+ }
+ input {
+  font-size: 1rem;
+ }
+ /* estilos para NOSOTROS */
+ .about p {
+  font-size: 1rem;
+}
+.about li {
+  font-size: 1rem;
+  margin: .9375rem .9375rem;
+}
+/* media para carrito de compras */
+.mis-compras {
+  margin-top: 3.125rem;
+  width: 21.875rem;
+  height: 31.25rem;
+}
 }
