@@ -106,6 +106,7 @@ body a {
 .mis-compras {
   width: 43.75rem;
   height: 43.75rem;
+  margin-top: 4.0625rem;
   padding: .625rem;
   border: solid #000;
   border-radius: .625rem;
@@ -481,6 +482,65 @@ details[open] summary::before {
   display: flex;
   justify-content: center;
 }
+/* ESTILOS PARA TAREA N°7 */
+.mis-compras {
+  display: flex;
+  align-items: center;
+}
+.t-7 {
+  width: 100%;
+  height:25rem;
+  padding: 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.clima {
+  width: 100%;
+  height: 60%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 10px 0px 0px;
+}
+.temp {
+  display: flex;
+  width: 70%;
+  height:40%;
+  gap: 30px;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 0px 10px;
+}
+.date {
+  display: flex;
+  flex-direction: row;
+  gap: .625rem;
+  width: 30%;
+  height: 40%;
+  background: #028a83;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 10px 0px
+}
+.date h3{
+  font-size: 3.125rem;
+}
+.grados {
+  font-size: 4.375rem;
+}
+.datos {
+  list-style: none;
+}
+.tipe {
+  font-size: 60px;
+}
+.add {
+  margin-left: 1.25rem;
+}
+
+
 /* /////////////////////////////// */
 /* Media Queries */
 @media screen and (max-width: 769px) {
@@ -690,4 +750,66 @@ h2 {
   width: 21.875rem;
   height: 31.25rem;
 }
+/* media para tarjeta de clima */
+.temp {
+  flex-direction: column;
+  gap: .3125rem;
+}
+.date{
+  display: flex;
+  flex-direction: column;
+}
+.date h3{
+  font-size: 1.875rem;
+}
+.grados {
+  font-size: 3.125rem;
+  display: flex;
+  align-items: center;
+}
+.datos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.tipe {
+  font-size: 1.5625rem;
+}
+.add {
+  margin-left: 0px;
+}
+}
+/* ////////// */
+@media screen and (max-width:375px) {
+  .product {
+    grid-template:repeat (5, 1fr) / repeat (1, 1fr);
+    grid-template-areas:
+      "card-1" 
+      "card-2"
+      "card-3"
+      "card-4" 
+      "card-5" 
+      "card-6"
+      "card-7" 
+      "card-8" 
+      "card-9";
+  }
+/* media para productos de distintas pages */
+  .product-cards {
+    grid-gap: 1.25rem;
+    grid-template: repeat (4, auto) / repeat(1, 1fr);
+    grid-template-areas:
+      "product-1"
+      "product-2"
+      "product-3"
+      "product-4"
+      "prodcut-5"
+      "product-6"
+      "product-7" 
+      "product-8";
+  }
+  .foot {
+    margin-top: 1.5625rem;
+  }
 }
