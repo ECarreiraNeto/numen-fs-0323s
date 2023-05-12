@@ -1,102 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"rel="stylesheet"/>
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>FIT-ONE</title>
-  </head>
-  <body>
-    <div class="home">
-    <header class="nav">
-      <!-- barra de navegacion-->
-      <nav class="nav-bar">
-        <div>
-          <ul class="listas">
-            <li>
-              <a href="index.html">INICIO</a>
-            </li>
-            <li>
-              <a href="#productos">PRODUCTOS</a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-bar2">
-          <ul class="listas">
-            <li>
-                <a href="./pages/comprar.html">COMPRAR</a>
-            </li>
-          </ul>
-          <ul class="list-cart">
-            <li>
-              <a href="./pages/mis-compras.html"><img class="carrito" src="./assets/img/cart.svg"alt="CARRITO DE COMPRAS"/></a>
-            </li>
-          </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Boostrap</title>
+</head>
+<body class="bg-dark-subtle">
+<div class="container-fluid p-3">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-secondary rounded" id="inicio">
+        <div class="container-fluid nav-inicio">
+          <button class="navbar-toggler text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item me-3">
+                <a class="nav-link active text-warning" aria-current="page" href="#historia">HISTORIA</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link text-warning" href="#personajes">PERSONAJES</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link text-warning" href="#tierra-media">TIERRA MEDIA</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link text-warning" href="#habitantes">HABITANTES</a>
+              </li>
+            </ul>
+          </div>
+          <div class="aling-end">
+            <img src="./assets/anillo.jpg" alt="" class="mx-auto rounded-circle ring">
+          </div>
         </div>
       </nav>
     </header>
-    <main class="container">
-      <!-- titulo de la pagina -->
-      <section class="titulo">
-        <h1>FIT-ONE</h1>
-        <h2>healt and fitness</h2>
-      </section>
-      <!-- aqui va el carrusel de imagenes -->
-      <section class="carrusel">
-        <div>CARRUSEL DE IMAGENES</div>
-      </section>
-      <!-- en esta seccion encontraemos agrupadas las card segun tipo de producto. Las imagenes trabajaran en conjunto con el enlace -->
-      <section class="product" id="productos">
-        <div class="card-1">
-          <a href="./pages/ofertas.html">OFERTAS</a>
+    <main class="container-fluid mt-5">
+        <section class="row text-center mb-5">
+          <div id="carouselExample" class="carousel slide container-fluid mb-5 justify-content-center">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/img-1.jpg" class="d-block mx-auto rounded img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img-2.jpg" class="d-block mx-auto rounded img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img-3.jpg" class="d-block mx-auto rounded img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img-4.jpg" class="d-block mx-auto rounded img-fluid" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+           <div class="col-md-12">
+            <h1 class="mb-4" id="historia">El señor de los Anillos</h1>
+            <p>El Señor de los Anillos (título original en inglés: The Lord of the Rings) es una novela de fantasía épica escrita por el filólogo y escritor británico J. R. R. Tolkien.
+              Su historia se desarrolla en la Tercera Edad del Sol de la Tierra Media, un lugar ficticio poblado por hombres y otras razas antropomorfas como los hobbits, los elfos o los enanos, así como por muchas otras criaturas reales y fantásticas. La novela narra el viaje del protagonista principal, Frodo Bolsón, hobbit de la Comarca, para destruir el Anillo Único y la consiguiente guerra que provocará el enemigo para recuperarlo, ya que es la principal fuente de poder de su creador, el Señor oscuro Sauron.</p>
+           </div>
+        </section>
+        <section class="row column-gap-3 row-gap-3 justify-content-center text-center">
+          <div class="rounded-pill bg-secondary mb-5 mt-5 p-1">
+            <h2 class="text-warning">Saga Literaria</h2>
+          </div>  
+          <div class="card p-2 border-0 bg-dark-subtle" style="width: 25rem;">
+            <img src="./assets/rezides/img-5.jpg" class="card-img-top w-75 mx-auto" alt="...">
+            <div class="card-body">
+              <p class="card-text fs-4">El Silmarillion, fecha de publicacion: 1977</p>
+            </div>
+          </div>
+          <div class="card p-2 border-0 bg-dark-subtle" style="width: 25rem;">
+            <img src="./assets/rezides/img-6.jpg" class="card-img-top w-75 mx-auto" alt="...">
+            <div class="card-body">
+              <p class="card-text fs-4">El Hobbit, fecha de publicacion: 1937</p>
+            </div>
+          </div>
+          <div class="card class p-2 border-0 bg-dark-subtle" style="width: 25rem;">
+            <img src="./assets/rezides/img-7.jpg" class="card-img-top w-75 mx-auto" alt="...">
+            <div class="card-body">
+              <p class="card-text fs-4">El señor de los anillos: la comunidad del anillo, fecha de publicacion: 1954</p>
+            </div>
+          </div>
+          <div class="card p-2 border-0 bg-dark-subtle" style="width: 25rem;">
+            <img src="./assets/rezides/img-8.jpg" class="card-img-top w-75 mx-auto" alt="...">
+            <div class="card-body">
+              <p class="card-text fs-4">El señor de los anillos: las dos torres, fecha de publicacion: 1954</p>
+            </div>
+          </div>
+          <div class="card p-2 border-0 bg-dark-subtle" style="width: 25rem;">
+            <img src="./assets/rezides/img-9.jpg" class="card-img-top w-75 mx-auto" alt="...">
+            <div class="card-body">
+              <p class="card-text fs-4">El señor de los anillos: el retorno del rey, fecha de publicacion: 1955</p>
+            </div>
+          </div>
+        </section>
+<!-- //////////Habitantes de la tierra media///////////////// -->
+        <section class="row justify-content-center text-center mt-5 row-gap-3 column-gap-2">
+          <div class="mt-5 mb-5 bg-secondary rounded-pill p-1">
+            <h2 class="text-warning" id="habitantes">Habitantes de la tierra media</h2>
+          </div>
+          <div class="col-md-10 col-lg-5 col-xl-5 rounded p-2">
+            <div>
+              <img src="./assets/rezides/hombres.jpg" alt="" class="w-50 mx-auto rounded imagenes">
+            </div>
+              <h3>Hombres</h3>
+                <details class="rounded">
+                  <summary></summary> 
+                    <p class="bg-secondary text-warning rounded">La raza de los hombres se refiere a la humanidad en su conjunto y no denota el género en sí. Por tanto, también puede usarse el término para referirse a las mujeres de esta raza. Los hombres son los Hijos Menores de Ilúvatar y fueron conocidos por muchos nombres entre los Eldar o elfos, entre ellos: Hildor los Seguidores, Apanónar los Nacidos Después, Engwar los Enfermizos, y Fírimar los Mortales además los llamaron también los Usurpadores, los Forasteros e Inescrutables, los Malditos, los de Mano Torpe, los Temerosos de la Noche y los Hijos del Sol.</p>
+                </details>
+            </div>
+          <div class="col-md-10 col-lg-5 col-xl-5 rounded p-2">
+            <div >
+              <img src="./assets/rezides/elfos.jpg" alt="" class="w-50 mx-auto rounded imagenes">
+            </div>
+              <h3>Elfos</h3>
+                <details class="rounded">
+                  <summary></summary> 
+                    <p class="bg-secondary text-warning rounded">Los Elfos fueron la más antigua y noble de las razas hablantes de la Tierra Media. También llamados la Gente hermosa, Pueblo del Bosque, Primeros Nacidos, Antigua Raza y a sí mismos Quendi "los que hablan".
+                        Son la raza más antigua del mundo y son los primeros hijos de Eru Iluvatar en venir al mundo y más tarde encontrados por los Valar.</p>
+                </details>
+          </div>
+          <div class="col-md-10 col-lg-5 col-xl-5 rounded p-2">
+            <div>
+              <img src="./assets/rezides/Enanos.jpg" alt="" class="w-50 mx-auto rounded imagenes">
+            </div>
+              <h3>Enanos</h3>
+              <details class="rounded">
+                <summary></summary>
+                 <p class="bg-secondary text-warning rounded" >Los enanos son una raza que habita en la Tierra Media. También son llamados Naugrim, Khazâd y Gonnhirrim.
+                    A diferencia de los Elfos y los Hombres los enanos no fueron creados directamente por Ilúvatar, sino por el vala Aulë tomando algún mineral de las profundidades de la tierra (no se sabe con certeza cual pero se sospecha que debió haber sido uno muy duro debido a la alta resistencia de estos seres) creó a los siete padres de los enanos que posteriormente darían lugar a toda la raza, sin embargo Aulë había creado en secreto a los enanos y al ser descubierto, arrepentido se ofreció a destruir a sus creaciones pero antes de hacerlo fue disculpado por Ilúvatar y se les permitió vivir con la única condición de que no despertaran antes que los Primeros Nacidos.</p>
+              </details>
+          </div>
+          <div class="col-md-10 col-lg-5 col-xl-5 rounded p-2">
+            <div>
+              <img src="./assets/rezides/orcos.jpg" alt="" class="w-50 mx-auto rounded imagenes">
+            </div>
+            <div class="aling-middle">
+            <h3>Orcos</h3>
+            <details class="rounded">
+              <summary></summary> 
+                <p class="bg-secondary text-warning rounded">Los Orcos (Orcs en el original inglés), conocidos por los elfos de Beleriand como Glamhoth «Horda Estridente» son una raza malvada, criada por Melkor como burla de los Elfos. Son los Quendi que cayeron en la trampa de Melkor cuando Oromë los fue a buscar para guiarlos a Aman. Fueron utilizados por los Señores Oscuros como la fuerza principal de sus ejércitos, y fueron mejorados y perfeccionados a lo largo de la historia, dando lugar a diversos tipos.</p>
+            </details>
+            </div>
+          </div>
+          <div class="col-md-10 col-lg-5 col-xl-5 rounded p-2">
+            <div>
+              <img src="./assets/rezides/trasgos.jpg" alt="" class="w-50 mx-auto rounded imagenes">
+            </div>
+            <h3>Trasgos</h3>
+            <details class="rounded">
+              <summary></summary>  
+                <p class="bg-secondary text-warning rounded">La palabra Trasgos (Goblins en el original inglés), es un sinónimo de Orcos, aunque normalmente se utiliza para referirse a la raza de Orcos de pequeño tamaño que habita en las profundidades de las montañas, para diferenciarlos de los Orcos normales. El propio Tolkien utiliza en El Hobbit la palabra "Trasgo" como nombre genérico para referirse a los Orcos, sobre todo para nombrar a los más pequeños. A los más grandes los llama Orcos de las Montañas y Hobotrasgos, aunque únicamente en ese libro.</p>
+            </details>
+          </div>
+          <div class="col-md-10 col-lg-5 col-xl-5 rounded p-2">
+            <div>
+              <img src="./assets/rezides/hobbit.jpg" alt="" class="w-50 mx-auto rounded imagenes">
+            </div>
+              <h3>Hobbits</h3>
+                <details class="rounded">
+                  <summary></summary>  
+                    <p class="bg-secondary text-warning rounded">Los Hobbits, también conocidos como «Medianos» (Periannath en lengua kuduk), se volvieron bastante raros y tímidos con la Gente Grande, como les llaman. Son (o fueron) gente menuda de la mitad de la talla de un humano, y más pequeños que los enanos barbudos. Los hobbits no poseen barba. Hay poca o ninguna magia en ellos. Tienden a ser gruesos de vientre; visten de colores brillantes (sobre todo verde y amarillo); no usan zapatos, porque en los pies tienen suelas naturales de piel y un pelo espeso y tibio de color castaño, como el que les crece en las cabezas (que es rizado)</p>
+                </details>
+          </div>
+          <div class="col-md-10 col-lg-5 col-xl-5 rounded p-2">
+            <div>
+              <img src="./assets/rezides/magos.jpg" alt="" class="w-50 mx-auto rounded imagenes">
+            </div>
+            <div class="aling-middle">
+              <h3>Magos</h3>
+                <details class="rounded">
+                  <summary></summary>  
+                    <p class="bg-secondary text-warning rounded">Los Maiar (magos) son seres espirituales, creados por Ilúvatar a partir de su pensamiento, que forman parte de la cosmogonía que creó Tolkien en la Ainulindalë. Los Maiar y los Valar son conocidos conjuntamente como Ainur, pero los Maiar son de menor rango que los Valar. Los Maiar, sirven a los poderosos Valar (que son catorce) y les asisten en su tarea de dar forma al mundo.
+                      Los Maiar que descendieron a la Tierra Media eran muchos y muy numerosos, muchos más en numero que los Valar. El grupo de los Maiar está constituido por tanto, por aquellos Ainur de menor rango que descendieron a Arda junto a los Valar, para servirles y ayudarles a acabar de dar forma al mundo.</p>
+                </details>
+            </div>
+          </div>
+          <div class="col-md-10 col-lg-5 col-xl-5 rounded p-2">
+            <div>
+              <img src="./assets/rezides/ents.jpg" alt="" class="w-50 mx-auto rounded imagenes">
+            </div>
+            <div class="aling-middle">
+              <h3>Ents</h3>
+              <details class="rounded">
+                <summary></summary>  
+                 <p class="bg-secondary text-warning">Los Ents son una raza de  seres inteligentes parecidos a árboles ficticios pertenecientes a la novela El Señor de los Anillos, escrita por J.R.R. Tolkien. La mayor diferencia respecto a los árboles normales es que ellos pueden desplazarse. Fueron creados en la Primera Edad por Yavanna, apodada "la Reina de la Tierra". Su principal función era que cuidaran de los otros árboles de peligros, en otras palabras, pastores de árboles. Habitaban en todos los bosques del mundo, pero al  final de la Tercera Edad solo quedaban unos pocos en el bosque de Fangorn.</p>
+              </details>
+            </div>
+        </section>
+<!-- //////////////Personajes Principales///////////////// -->
+      <section class="row justify-content-center text-center mt-5 row-gap-3 column-gap-2">
+        <div class="mt-5 mb-5 bg-secondary rounded-pill p-1">
+          <h2 class="text-warning" id="personajes">Personajes principales</h2>
+        </div>  
+          <div class="card p-2 bg-secondary border-0 col-md-10 col-lg-5 col-xl-5 rounded p-2" style="width: 18rem;">
+            <img src="./assets/frodo.jpg" class="card-img-top mx-auto img-2 rounded" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Frodo Bolson</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0 text-warning bg-secondary">Raza: Hobbit</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Familia: familiares Prímula Brandigamo(madre), Drogo Bolsón (padre), Bilbo Bolsón (tío)</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Titulo: Portador del Anillo</li>
+            </ul>
+          </div>
+          <div class="card p-2 bg-secondary border-0 col-md-10 col-lg-5 col-xl-5 rounded p-2" style="width: 18rem;">
+            <img src="./assets/rezides/sam.jpg" class="card-img-top mx-auto img-2 rounded" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Sam Gamgee</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0 text-warning bg-secondary">Raza: Hobbit</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Familia: Hamfast Gamyi(padre), Campanilla Buenchico(madre)</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Titulo: Alcalde de la Comarca</li>
+            </ul>
+          </div>
+          <div class="card p-2 bg-secondary border-0 col-md-10 col-lg-5 col-xl-5 rounded p-2" style="width: 18rem;">
+            <img src="./assets/rezides/aragorn.jpg" class="card-img-top mx-auto img-2 rounded" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Aragorn</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0 text-warning bg-secondary">Raza: Dúnedain</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Familia: Arathorn II (padre), Gilraen (madre)</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Titulo: Rey del Reino Unificado</li>
+            </ul>
+          </div>
+          <div class="card p-2 bg-secondary border-0 col-md-10 col-lg-5 col-xl-5 rounded p-2" style="width: 18rem;">
+            <img src="./assets/rezides/legolas.jpg" class="card-img-top mx-auto img-2 rounded" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Legolas</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0 text-warning bg-secondary">Raza: Elfo sindar</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Familia: Thranduil (padre),
+                Oropher (abuelo)</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Titulo: Príncipe de los elfos</li>
+            </ul>
+          </div>
+          <div class="card p-2 bg-secondary border-0 col-md-10 col-lg-5 col-xl-5 rounded p-2" style="width: 18rem;">
+            <img src="./assets/rezides/gimli.jpg" class="card-img-top mx-auto img-2 rounded" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Gimli</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0 text-warning bg-secondary">Raza: Enano</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Familia: Glóin(padre), Gróin(abuelo), Óin, Balin y Dwalin (tíos)</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Titulo: Señor de Aglarond</li>
+            </ul>
+          </div>
+          <div class="card p-2 bg-secondary border-0 col-md-10 col-lg-5 col-xl-5 rounded p-2" style="width: 18rem;">
+            <img src="./assets/rezides/gandalf.jpg" class="card-img-top mx-auto img-2 rounded objet-fit-contain" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Gandalf el gris</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0 text-warning bg-secondary">Raza: 	Istar (Mago)</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Familia: desconocida</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Titulo: Líder de la Compañía del Anillo</li>
+            </ul>
+          </div>
+          <div class="card p-2 bg-secondary border-0 col-md-10 col-lg-5 col-xl-5 rounded p-2" style="width: 18rem;">
+            <img src="./assets/rezides/saruman.jpg" class="card-img-top mx-auto img-2 rounded objet-fit-contain" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Saruman el blanco</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0 text-warning bg-secondary">Raza: Istar (Mago)</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Familia: desconocida</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Titulo: Líder de la Orden de los Istari
+                Señor de Isengard</li>
+            </ul>
+          </div>
+          <div class="card p-2 bg-secondary border-0 col-md-10 col-lg-5 col-xl-5 rounded p-2" style="width: 18rem;">
+            <img src="./assets/rezides/sauron-fan.jpg" class="card-img-top mx-auto img-2 rounded objet-fit-contain" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Sauron</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0 text-warning bg-secondary">Raza: Maiar (Ainur)</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Familia: desconocida</li>
+              <li class="list-group-item border-0 text-warning bg-secondary">Titulo: Creador y Dueño del Anillo Único, Señor de Mordor</li>
+            </ul>
+          </div>
+        </section>
+<!-- //////////////Mapa de la Tiera Media///////////////// -->
+    <section class="row text-center mt-5">
+          <div class="mt-5 mb-5 bg-secondary rounded-pill p-1">
+            <h2 class="text-warning" id="tierra-media">Tierra Media</h2>
+          </div> 
+          <div>
+            <img src="./assets/tierra media.jpg" alt="" class="w-75 mx-auto imagenes">
+          </div>
+    </section>
+        <div class="row text-center rounded-circle mt-5">
+          <button class="rounded-circle btn-sauron">
+            <a href="#inicio"><img src="./assets/ojo.jpg" alt="" class="img-button rounded-circle"></a>
+          </button>
         </div>
-        <div class="card-2">
-          <a href="./pages/combos.html">COMBOS</a>
-        </div>
-        <div class="card-3">
-          <a href="./pages/destacados.html">DESTACADOS</a>
-        </div>
-        <div class="card-4">
-          <a href="./pages/masa-muscular.html">MASA MUSCULAR</a>
-        </div>
-        <div class="card-5">
-          <a href="./pages/fuerza.html">FUERZA</a>
-        </div>
-        <div class="card-6">
-          <a href="./pages/recuperacion.html">RECUPERACION</a>
-        </div>
-        <div class="card-7">
-          <a href="./pages/energia.html">ENERGIA</a>
-        </div>
-        <div class="card-8">
-          <a href="./pages/perdidad-g.html">PERDIDA DE GRASA</a>
-        </div>
-        <div class="card-9">
-          <a href="./pages/salud.html">SALUD Y ESTETICA</a>
-        </div>
-      </section>
     </main>
-    <!-- aqui va el footer con informacion de contacto y redes sociales -->
-    <footer class="foot">
-    <div class="nav-bar2">
-      <ul class="listas">
-        <li><a href="./pages/contacto.html">CONTACTO</a></li>
-      </ul>
-      <ul class="foot-list">
-        <li><a href="https://www.instagram.com/" target="_blank"><img src="./assets/img/instagram.png" alt="Icono Instagram" class="foot-img"></a></li>
-        <li><a href="https://es-la.facebook.com/" target="_blank"><img src="./assets/img/facebook.png" alt="Icono Facebook" class="foot-img"></a></li>
-      </ul>
-    </div>
-    <div>
-      <ul class="listas">
-        <li><a href="./pages/nosotros.html">NOSOTROS</a></li>
-      </ul>
-    </div>
+    <footer class="row m-2 mt-5">
+      <div class="card text-center bg-secondary">
+        <div class="card-header">
+          <h2>Comunidad del anillo</h2>
+          <img src="./assets/anillo.jpg" alt="" class="mx-auto rounded-circle ring">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Si te gusto este contenido y deseas continuar descubriendo el universo Tolkien haz click en el siguiente enlace</h5>
+          <a href="https://elanillounico.com/tolkienpedia/" target="_blank" class="btn btn-dark text-warning">Nuestra comunidad</a>
+        </div>
+        <div class="card-footer text-body-secondary">
+          <p class="text-warning">Ash Nazg durbatulûk, ash Nazg gimbatul, ash Nazg thrakatulûk agh burzum-ishi krimpatul.</p>
+          <p class="text-warning">Un Anillo para gobernarlos a todos. Un Anillo para encontrarlos, un Anillo para atraerlos a todos y atarlos en las tinieblas.</p>
+        </div>
+      </div>
     </footer>
-  </div>
-  </body>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
 </html>
