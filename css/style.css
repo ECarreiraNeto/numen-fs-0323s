@@ -1,6 +1,14 @@
 * {
   font-family: 'Roboto Condensed', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+.nav-bar1 {
+  position: sticky;
+  top: 0%;
+  z-index: 1000;
+}
 summary {
     list-style: none;
     display: inline;
